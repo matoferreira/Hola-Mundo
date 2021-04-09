@@ -1,0 +1,258 @@
+//Tarea 2.1
+PS C:\Users\matif\desktop> cd Hola-Mundo
+PS C:\Users\matif\desktop\Hola-Mundo> git init
+Initialized empty Git repository in C:/Users/matif/Desktop/Hola-Mundo/.git/
+PS C:\Users\matif\desktop\Hola-Mundo>
+
+//Tarea 2.3
+PS C:\Users\matif\Desktop\Hola-Mundo> git add README.md
+PS C:\Users\matif\Desktop\Hola-Mundo> git status
+On branch master
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+PS C:\Users\matif\Desktop\Hola-Mundo> git commit -m "Commit inicial"
+[master (root-commit) 3b6dc15] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+//Tarea 2.5
+PS C:\Users\matif\Desktop\Hola-Mundo> git remote add origin https://github.com/matoferreira/Hola-Mundo.git
+PS C:\Users\matif\Desktop\Hola-Mundo> git pull origin main --allow-unrelated-histories
+remote: Enumerating objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+Unpacking objects: 100% (3/3), 3.19 KiB | 408.00 KiB/s, done.
+From https://github.com/matoferreira/Hola-Mundo
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Merge made by the 'recursive' strategy.
+ .gitignore | 350 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 350 insertions(+)
+ create mode 100644 .gitignore
+PS C:\Users\matif\Desktop\Hola-Mundo> git branch --set-upstream-to=origin/main master
+Branch 'master' set up to track remote branch 'main' from 'origin'.
+
+//Tarea 2.6
+PS C:\Users\matif\Desktop\Hola-Mundo> git push origin master
+Enumerating objects: 6, done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+remote:      https://github.com/matoferreira/Hola-Mundo/pull/new/master
+remote:
+To https://github.com/matoferreira/Hola-Mundo.git
+ * [new branch]      master -> master
+
+//Tarea 2.7
+PS C:\Users\matif\Desktop\Hola-Mundo> git push origin --delete main
+To https://github.com/matoferreira/Hola-Mundo.git
+ - [deleted]         main
+PS C:\Users\matif\Desktop\Hola-Mundo> git fetch -p
+PS C:\Users\matif\Desktop\Hola-Mundo> cd ..    
+PS C:\Users\matif\Desktop> cd Hola-Mundo  
+PS C:\Users\matif\Desktop\Hola-Mundo> ls
+
+    Directorio: C:\Users\matif\Desktop\Hola-Mundo
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         8/4/2021     20:58           6352 .gitignore
+
+
+PS C:\Users\matif\Desktop\Hola-Mundo> dir /A:H
+dir : No se encuentra la unidad. No existe ninguna unidad con el nombre '/A'.
+En línea: 1 Carácter: 1
++ dir /A:H
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (/A:String) [Get-ChildItem], DriveNotFoundException
+ 
+PS C:\Users\matif\Desktop\Hola-Mundo> Get-Childitem Hola-Mundo - Force
+Get-ChildItem : No se encuentra ningún parámetro de posición que acepte el argumento 'Force'.
+En línea: 1 Carácter: 1
++ Get-Childitem Hola-Mundo - Force
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-ChildItem], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.GetChildItemComm  
+   and
+ 
+PS C:\Users\matif\Desktop\Hola-Mundo> dir
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         8/4/2021     20:58           6352 .gitignore
+-a----         8/4/2021     20:55             16 README.md
+
+
+PS C:\Users\matif\Desktop\Hola-Mundo> del .gitignore
+PS C:\Users\matif\Desktop\Hola-Mundo> del README.md
+PS C:\Users\matif\Desktop\Hola-Mundo> ls
+PS C:\Users\matif\Desktop\Hola-Mundo> ls -a
+Get-ChildItem : No se puede procesar el parámetro porque el nombre de parámetro 'a' es ambiguo. Las       
+posibles coincidencias son: -Attributes -Directory -File -Hidden -ReadOnly -System.
+En línea: 1 Carácter: 4
++ ls -a
++    ~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-ChildItem], ParameterBindingException
+    + FullyQualifiedErrorId : AmbiguousParameter,Microsoft.PowerShell.Commands.GetChildItemCommand        
+ 
+
+
+    Directorio: C:\Users\matif\Desktop\Hola-Mundo
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d--h--         8/4/2021     21:05                .git
+
+
+PS C:\Users\matif\Desktop\Hola-Mundo> del .git
+
+Confirmar
+El elemento situado en C:\Users\matif\Desktop\Hola-Mundo\.git tiene elementos secundarios y no se
+especificó el parámetro Recurse. Si continúa, se quitarán todos los secundarios junto con el elemento.    
+¿Está seguro de que desea continuar?
+[S] Sí  [O] Sí a todo  [N] No  [T] No a todo  [U] Suspender  [?] Ayuda (el valor predeterminado es "S"):s 
+
+del : No se puede quitar el elemento 
+C:\Users\matif\Desktop\Hola-Mundo\.git\objects\31\26c3afcccba9f3ad5f84db9155d40785d2b88e: No dispone de   
+permisos suficientes para realizar esta operación.
+En línea: 1 Carácter: 1
++ del .git
++ ~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (26c3afcccba9f3ad5f84db9155d40785d2b88e:FileInfo) [Remov  
+   e-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.Remov  
+   eItemCommand
+del : No se puede quitar el directorio C:\Users\matif\Desktop\Hola-Mundo\.git\objects\31 porque no está   
+vacío.
+En línea: 1 Carácter: 1
++ del .git
++ ~~~~~~~~
+   
+PS C:\Users\matif\Desktop\Hola-Mundo> rmdir .git
+
+Confirmar
+El elemento situado en C:\Users\matif\Desktop\Hola-Mundo\.git tiene elementos secundarios y no se
+especificó el parámetro Recurse. Si continúa, se quitarán todos los secundarios junto con el elemento.    
+¿Está seguro de que desea continuar?
+[S] Sí  [O] Sí a todo  [N] No  [T] No a todo  [U] Suspender  [?] Ayuda (el valor predeterminado es "S"):s 
+
+rmdir : No se puede quitar el elemento 
+C:\Users\matif\Desktop\Hola-Mundo\.git\objects\31\26c3afcccba9f3ad5f84db9155d40785d2b88e: No dispone de   
+permisos suficientes para realizar esta operación.
+En línea: 1 Carácter: 1
++ rmdir .git
++ ~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (26c3afcccba9f3ad5f84db9155d40785d2b88e:FileInfo) [Remov  
+   e-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.Remov  
+   eItemCommand
+rmdir : No se puede quitar el directorio C:\Users\matif\Desktop\Hola-Mundo\.git\objects\31 porque no 
+está vacío.
+En línea: 1 Carácter: 1
++ rmdir .git
++ ~~~~~~~~~~
+ 
+PS C:\Users\matif\Desktop\Hola-Mundo> cd .git
+
+
+    Directorio: C:\Users\matif\Desktop\Hola-Mundo\.git
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         8/4/2021     21:12                objects
+
+
+PS C:\Users\matif\Desktop\Hola-Mundo\.git> rm objects
+
+Confirmar
+El elemento situado en C:\Users\matif\Desktop\Hola-Mundo\.git\objects tiene elementos secundarios y no se 
+ especificó el parámetro Recurse. Si continúa, se quitarán todos los secundarios junto con el elemento.   
+¿Está seguro de que desea continuar?
+[S] Sí  [O] Sí a todo  [N] No  [T] No a todo  [U] Suspender  [?] Ayuda (el valor predeterminado es "S"):s 
+
+rm : No se puede quitar el elemento 
+C:\Users\matif\Desktop\Hola-Mundo\.git\objects\31\26c3afcccba9f3ad5f84db9155d40785d2b88e: No dispone de   
+permisos suficientes para realizar esta operación.
+En línea: 1 Carácter: 1
++ rm objects
++ ~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (26c3afcccba9f3ad5f84db9155d40785d2b88e:FileInfo) [Remov  
+   e-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.Remov  
+   eItemCommand
+rm : No se puede quitar el directorio C:\Users\matif\Desktop\Hola-Mundo\.git\objects\31 porque no está    
+vacío.
+En línea: 1 Carácter: 1
++ rm objects
++ ~~~~~~~~~~
+    + CategoryInfo          : WriteError: (31:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : DirectoryNotEmpty,Microsoft.PowerShell.Commands.RemoveItemCommand
+ 
+rm : No se puede quitar el elemento 
+C:\Users\matif\Desktop\Hola-Mundo\.git\objects\3b\6dc1585dd20a8481e75f1ff5094ccb3fe7139f: No dispone de   
+permisos suficientes para realizar esta operación.
+En línea: 1 Carácter: 1
++ rm objects
++ ~~~~~~~~~~
+ 
+PS C:\Users\matif\Desktop\Hola-Mundo\.git>
+//Debido a que no me dejaba borrar la carpeta por tener archivos contenedores
+//opté por eliminarla por explorador de windows ):
+
+//Tarea 2.8
+PS C:\Users\matif\Desktop> git clone https://github.com/matoferreira/Hola-Mundo.git
+Cloning into 'Hola-Mundo'...
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 8 (delta 0), reused 5 (delta 0), pack-reused 0
+Receiving objects: 100% (8/8), done.
+PS C:\Users\matif\Desktop> cd Hola-Mundo
+PS C:\Users\matif\Desktop\Hola-Mundo> git checkout -b "dev"
+Switched to a new branch 'dev'
+
+//Tarea 2.11
+PS C:\Users\matif\Desktop\Hola-Mundo> git status
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\matif\Desktop\Hola-Mundo> git add README.md
+PS C:\Users\matif\Desktop\Hola-Mundo> git commit -m "Cambios en la rama"
+[dev 4942a18] Cambios en la rama
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+//Tarea 2.12
+PS C:\Users\matif\Desktop\Hola-Mundo> git push origin dev
+Enumerating objects: 5, done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/matoferreira/Hola-Mundo/pull/new/dev
+To https://github.com/matoferreira/Hola-Mundo.git
+ * [new branch]      dev -> dev
+
+//Tarea 2.13
+PS C:\Users\matif\Desktop\Hola-Mundo> git checkout master
+Your branch is up to date with 'origin/master'.
+Updating af31cd2..4942a18
+PS C:\Users\matif\Desktop\Hola-Mundo> git merge dev
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\matif\Desktop\Hola-Mundo> git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/matoferreira/Hola-Mundo.git
+   af31cd2..4942a18  master -> master
+
+//Tarea 2.14
+PS C:\Users\matif\Desktop\Hola-Mundo> git branch -d dev
+Deleted branch dev (was 4942a18).
+PS C:\Users\matif\Desktop\Hola-Mundo> git push origin --delete dev
+To https://github.com/matoferreira/Hola-Mundo.git
+ - [deleted]         dev
+PS C:\Users\matif\Desktop\Hola-Mundo> git fetch -p
+PS C:\Users\matif\Desktop\Hola-Mundo>

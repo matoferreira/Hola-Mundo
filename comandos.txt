@@ -255,4 +255,17 @@ PS C:\Users\matif\Desktop\Hola-Mundo> git push origin --delete dev
 To https://github.com/matoferreira/Hola-Mundo.git
  - [deleted]         dev
 PS C:\Users\matif\Desktop\Hola-Mundo> git fetch -p
-PS C:\Users\matif\Desktop\Hola-Mundo>
+//Agregar txt con comandos
+PS C:\Users\matif\Desktop\Hola-Mundo> git add comandos.txt
+PS C:\Users\matif\Desktop\Hola-Mundo> git commit -m "agregado archivo txt de comandos"
+[master 4d123e5] agregado archivo txt de comandos
+ 1 file changed, 258 insertions(+)
+ create mode 100644 comandos.txt
+PS C:\Users\matif\Desktop\Hola-Mundo> git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.71 KiB | 2.71 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/matoferreira/Hola-Mundo.git
